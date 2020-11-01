@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:gravity="left"
+        android:text="@string/title"/>
+
+    <TextView
+        android:id="@+id/edt_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:text="BTY 안드로이드 스터디"/>
+
+    <Button
+        android:id="@+id/btn_2WeekWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2주차 숙제"/>
+
+    <Button
+        android:id="@+id/btn_3WeekWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3주차 숙제"/>
+
+    <Button
+        android:id="@+id/btn_4WeekWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4주차 숙제"/>
+
+    <Button
+        android:id="@+id/btn_5WeekWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5주차 숙제"/>
+
+    <Button
+        android:id="@+id/btn_6WeekWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="6주차 숙제"/>
+
+
+</LinearLayout>
+
+
