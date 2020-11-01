@@ -1,5 +1,6 @@
 package study.bty.kotlin
 
+
 // open 키워드를 붙여야 다른 클래스가 상속할 수 있다.
 open class Human(
     val name: String = "",
@@ -9,7 +10,7 @@ open class Human(
     val email = if (mail.contains("@")) {
         mail
     } else {
-        "$mail@human.com"
+        "$mail$DOMAIN"
     }
 
     constructor(name: String) : this(name, 0, "")
