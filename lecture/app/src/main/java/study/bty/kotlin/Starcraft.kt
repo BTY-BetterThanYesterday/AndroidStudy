@@ -10,15 +10,54 @@ package study.bty.kotlin
  * by lazy : 사용 시점에 초기화 된다.
  */
 
-class Unit(
+class Unit private constructor(
     var hp: Int,
-    var atk : Int
+    var atk : Int,
+    var atkAir : Double,
+    val sp : Species = Species.ZERG
 ) {
+    init {
+        poplutaion++
+    }
     override fun toString(): String {
         return "hp: $hp atk: $atk"
     }
+    companion object {
+        fun of(hp :Int, atk: Int) = Unit(hp, atk, 0.0)
+        fun of(hp :Int, atk: Double) = Unit(hp, 0, atk)
+        var poplutaion : Int = 0
+    }
+}
 
+enum class Species {
+    ZERG, TERRAN, PROTOS
+}
 
+fun main() {
+    val scv = Unit.of(0, 0)
+    println(Unit.poplutaion)
+    val scv2 = Unit.of(0, 0)
+    println(Unit.poplutaion)
+    val scv3 = Unit.of(0, 0)
+    println(Unit.poplutaion)
+
+    Single.foo()
+
+    val p = when (scv.sp) {
+        Species.ZERG -> { 0 }
+        Species.TERRAN -> { 1 }
+        Species.PROTOS -> { 2 }
+    }
+
+    val hhp = when (scv.hp) {
+        0 -> { 1 }
+        1 -> { 2 }
+        else ->  { 0 }
+    }
+}
+
+object Single {
+    fun foo() { }
 }
 
 
