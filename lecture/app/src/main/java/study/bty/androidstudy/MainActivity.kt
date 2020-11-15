@@ -12,16 +12,17 @@ import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-//    lateinit var button: Button
+    //    lateinit var button: Button
     val button: Button by lazy {
-    Log.e("BTY", "by lazy")
-    findViewById<Button>(R.id.btn_next)
-}
+        Log.e("BTY", "by lazy")
+        findViewById<Button>(R.id.btn_next)
+    }
 //    var button: Button? = findViewById(R.id.btn_next)
 
     init {
         Log.e("BTY", "init")
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -51,10 +52,16 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun next() {
-        val intent = Intent(this, MainActivity2::class.java)
         // val text = findViewById<EditText>(R.id.edt_input).text.toString() // 남주는 이거
-        intent.putExtra("name", edt_input.text.toString())
-        startActivity(intent)
+
+//        val intent = Intent(this, MainActivity2::class.java)
+//        intent.putExtra("name", edt_input.text.toString())
+//        startActivity(intent)
+        startActivity(
+            Intent(this, MainActivity2::class.java).apply {
+                putExtra("name", edt_input.text.toString())
+            }
+        )
     }
 
     override fun onResume() {
