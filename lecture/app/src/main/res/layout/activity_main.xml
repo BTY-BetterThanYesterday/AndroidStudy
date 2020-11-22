@@ -61,4 +61,17 @@
             />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btn_cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="고양이 이미지 보여줘"
+        />
+    <ImageView
+        android:id="@+id/image_cat"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        tools:background="@color/colorPrimary"
+        />
+
 </LinearLayout>
